@@ -1018,6 +1018,11 @@ pokeplatinum_c += files(
     'port/charcode_convert.c',
     'port/debug_field.c',
     'port/sim_config_prj.c',
+    'port/sim_gui_prj.cpp',
+    'port/gui_cheats.cpp',
+    'port/gui_configPrj.cpp',
+    'port/gui_createmon.cpp',
+    'port/gui_createmon_utils.c'
     #'port/sim_gui_prj.c',
     #'port/gui_cheats.c',
     #'port/gui_configprj.c',
