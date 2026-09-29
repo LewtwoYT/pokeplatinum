@@ -1021,14 +1021,11 @@ pokeplatinum_c += files(
     'port/sim_gui_prj.cpp',
     'port/gui_cheats.cpp',
     'port/gui_configPrj.cpp',
+    'port/gui_createitem.cpp',
+    'port/gui_createitem_utils.c',
     'port/gui_createmon.cpp',
-    'port/gui_createmon_utils.c'
-    #'port/sim_gui_prj.c',
-    #'port/gui_cheats.c',
-    #'port/gui_configprj.c',
-    #'port/gui_createitem.c',
-    #'port/gui_createmon.c',
-    #'port/gui_fieldinfo.c',
-    #'port/gui_mapjump.c'
+    'port/gui_createmon_utils.c',
+    'port/gui_mapjump.cpp',
+    'port/gui_mapjump_utils.c'
 )
 endif

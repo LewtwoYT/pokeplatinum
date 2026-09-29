@@ -11,18 +11,20 @@ static bool sCreateMonOpen = false;
 static bool sCreateItemOpen = false;
 static bool sConfigPrjOpen = false;
 static bool sCheatsOpen = false;
-static bool sFieldInfoOpen = false;
 static bool sMapJumpOpen = false;
 
 void PrjMain(bool * openState) {
     ImGui::Begin("pokeplatinum", openState);
 
+    ImGui::Text("Git rev: %s", SIM_GetProjectGitHash());
+
     AppButton("Cheats", &sCheatsOpen, nullptr, CheatsMain);
     AppButton("Config", &sConfigPrjOpen, nullptr, ConfigPrjMain);
     AppButton("Gen Pokemon", &sCreateMonOpen, CreateMonInit, CreateMonMain);
+    AppButton("Gen Items", &sCreateItemOpen, CreateItemInit, CreateItemMain);
 
-    if(DEBUG_GetFieldSystem()) {
-
+    if(DEBUG_GetFieldSystem() != nullptr) {
+        AppButton("Jump to Map", &sMapJumpOpen, MapJumpInit, MapJumpMain);
     }
 
     ImGui::End();

@@ -9,8 +9,6 @@ void CreateItemInit();
 void CreateItemMain(bool * openState);
 void CreateMonInit();
 void CreateMonMain(bool * openState);
-void FieldInfoInit();
-void FieldInfoMain(bool * openState);
 void MapJumpInit();
 void MapJumpMain(bool * openState);
 

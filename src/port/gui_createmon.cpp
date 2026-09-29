@@ -22,9 +22,10 @@ static int sLevel = 1;
 static constexpr ImVec2 BtnSize = {100, 20};
 
 void CreateMonInit() {
+    sSpeciesNames.clear();
     sSpeciesNames.push_back("None");
 
-    for(int i=1; i < SPECIES_BAD_EGG+1; i++) {
+    for(int i=1; i <= SPECIES_BAD_EGG; i++) {
         const char * pokemonName = GUI_CreateMon_GetSpeciesName(i);
         sSpeciesNames.push_back(std::string(pokemonName));
         delete pokemonName;
