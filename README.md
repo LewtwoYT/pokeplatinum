@@ -1,37 +1,36 @@
 # Pokémon Platinum PC Port
+## Info
+_Feel free to join us on [Discord](https://discord.gg/ZgtPszuBeN) for discussion or support._
 
-This is an experimental PC port of Pokemon Platinum based on the [pret](https://github.com/pret/pokeplatinum) decompilation project. It is powered by the [libntr](https://github.com/cybervisi0n/libntr) suite, a collection of libraries that replace the NitroSDK to allow for easy porting of Nintendo DS games.
+**pokeplatinum** is an experimental PC port of Pokémon Platinum based on the [pret](https://github.com/pret/pokeplatinum) decompilation project and powered by the [libntr](https://github.com/cybervisi0n/libntr) suite; a collection of libraries that replace the NitroSDK to allow for easy porting of Nintendo DS titles.
 
-Join us on [Discord](https://discord.gg/ZgtPszuBeN)
+* The port should be possible to play from start to finish, albeit with crashes and minor graphical bugs. **[If you spot any issues, please report them here to be fixed!](https://github.com/cybervisi0n/pokeplatinum/issues)**
+* Generative AI/LLM shortcuts were **not** used in the creation of this project. **Pull requests or code suggestions using AI will be rejected.**
 
-It should be possible to play the game from start to finish, but there could be crashes and graphical bugs. 
-
-Project goals:
+## Project Goals:
 * Create a native port of pokeplatinum for 64-bit PC platforms
 * * Long term: Create native ports for homebrew on various game consoles
 * Facilitate modding by allowing both a PC port and DS ROM to be compiled and debugged from the same source tree
-* Support all WiFi and multiplayer features
+* Support for all Wi-Fi and multiplayer features
 
-## ROM Extraction 
-To run the pre-built binaries found in the releases tab, **you MUST dump and extract your own US ROM of Pokémon Platinum.** ROM extraction is now handled for you, but you still must provide your own ROM.
-* On first launch, there will be a dialog like this:
+## Setup Guide
+### Pre-Built Binaries (running via .exe)
+To run the [pre-built binaries found in the releases tab,](https://github.com/cybervisi0n/pokeplatinum/releases) **you MUST dump and extract your own US ROM of Pokémon Platinum.** Extraction of the ROM is automatic, but you still must provide your own.
+
+* On the first launch of **main.exe** you'll be prompted to select your own **.nds** file, as seen below.
 
 ![ROM extraction dialog 1](images/RomExtractionStep1.png)
 
-* Press OK, then there will be a file picker dialog:
+* Now you're done! Click **main.exe** to launch your game at any point. **To access in-game debug tools, press Tab.**
 
-![ROM extraction dialog 2](images/RomExtractionStep2.png)
-
-* Select the .nds file and click OK
-
-## Building on Linux
-### Dockerized build (Recommended)
+### Building on Linux
+#### Dockerized build (Recommended)
 This only requires Docker to be installed and setup on your system. The drun.sh script is used to build the docker image and run build commands in it. Build with:
 * ./drun.sh make linux
 
 The container image will automatically be built the first time this script is run.
 
-### Non-container build
+#### Non-container build
 Required Packages (arch linux):
 * nasm
 * enet
@@ -52,7 +51,7 @@ Alternatively:
 You can also build a ROM from the same source tree, just run:
 * make
 
-## Building on Windows
+### Building on Windows
 From a freshly cloned repo, run the "Install_MSys2.ps1" script in powershell. This will create a portable MSys2 build environment with all dependencies installed in the repo. This only has to be done once per repo.
 
 To build, run "Launch_MSys2.ps1" and it will launch a MSys2 bash shell. From here, run "make win64" to build.
