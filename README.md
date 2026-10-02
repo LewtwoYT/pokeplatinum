@@ -19,7 +19,7 @@ To run the [pre-built binaries found in the releases tab,](https://github.com/cy
 
 * On the first launch of **main.exe** you'll be prompted to select your own **.nds** file, as seen below.
 
-![ROM extraction dialog 1](images/RomExtractionStep1.png)
+![ROM extraction dialog 1](images/BinarySetup.png)
 
 * Now you're done! Click **main.exe** to launch your game at any point. **To access in-game debug tools, press Tab.**
 
